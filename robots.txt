@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://johnjobyder.github.io/mainhome-hth-com-cn/sitemap.xml

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于 pg游戏 · 一份安静的阅读页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: #f6f4ef;
+            color: #2c2b28;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 深色头图 ———— 博客式衬底，不压文字，留白呼吸 */
+        .hero-dark {
+            background: #1e1c1a;
+            padding: 4rem 1.5rem 3.2rem 1.5rem;
+            text-align: center;
+            color: #ebe7de;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-dark::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #b39d7b, #c9b79b, #b39d7b);
+            opacity: 0.5;
+        }
+
+        .hero-dark .meta {
+            font-size: 0.8rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #9a9082;
+            margin-bottom: 1rem;
+        }
+
+        .hero-dark h1 {
+            font-size: 2.4rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.75rem;
+            color: #f0ebe0;
+        }
+
+        .hero-dark .sub {
+            max-width: 540px;
+            margin: 0 auto;
+            font-size: 1rem;
+            color: #c4bbae;
+            border-top: 1px solid #3f3a34;
+            padding-top: 1rem;
+            display: inline-block;
+        }
+
+        /* 正文区 ———— 浅色、舒适、留白 */
+        .content {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.8rem 1.8rem 4rem 1.8rem;
+            background: #ffffff;
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.02), 0 8px 24px rgba(0,0,0,0.03);
+            border-radius: 0 0 12px 12px;
+        }
+
+        .content p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            color: #2c2b28;
+        }
+
+        .content p.lead {
+            font-size: 1.1rem;
+            color: #3e3b36;
+            border-left: 3px solid #b39d7b;
+            padding-left: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 380;
+        }
+
+        .content .quote-block {
+            background: #f4f0ea;
+            padding: 1.6rem 1.8rem;
+            border-radius: 6px;
+            margin: 2rem 0 1.8rem 0;
+            font-style: normal;
+            position: relative;
+        }
+
+        .content .quote-block::before {
+            content: "📌";
+            position: absolute;
+            left: -0.2rem;
+            top: -0.6rem;
+            font-size: 1.4rem;
+            opacity: 0.6;
+        }
+
+        .quote-block p {
+            margin-bottom: 0.4rem;
+            color: #3f3a34;
+            font-size: 0.97rem;
+        }
+
+        .quote-block .source {
+            font-size: 0.85rem;
+            color: #7d7368;
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        a {
+            color: #8f6b3f;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s, color 0.15s;
+            font-weight: 450;
+        }
+
+        a:hover {
+            color: #b57c45;
+            border-bottom-color: #b57c45;
+        }
+
+        .content h2 {
+            font-size: 1.4rem;
+            font-weight: 380;
+            margin-top: 2.2rem;
+            margin-bottom: 1rem;
+            color: #2b2722;
+            letter-spacing: -0.01em;
+            border-bottom: 1px solid #e3ddd4;
+            padding-bottom: 0.3rem;
+        }
+
+        .content .signoff {
+            margin-top: 2.8rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #ddd8cf;
+            font-size: 0.95rem;
+            color: #5e5951;
+        }
+
+        .content .signoff strong {
+            font-weight: 450;
+            color: #2c2b28;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 640px) {
+            .hero-dark {
+                padding: 2.8rem 1rem 2.4rem 1rem;
+            }
+            .hero-dark h1 {
+                font-size: 1.9rem;
+            }
+            .content {
+                padding: 2rem 1.2rem 3rem 1.2rem;
+                border-radius: 0;
+            }
+            .content p.lead {
+                font-size: 1rem;
+                padding-left: 1rem;
+            }
+            .content .quote-block {
+                padding: 1.2rem 1.2rem;
+                margin-left: -0.2rem;
+                margin-right: -0.2rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .hero-dark h1 {
+                font-size: 1.6rem;
+            }
+        }
+
+        /* 极小修饰 */
+        .dot-sep {
+            display: inline-block;
+            margin: 0 0.5rem;
+            color: #b6afa4;
+        }
+
+        .fine-print {
+            font-size: 0.8rem;
+            color: #90897d;
+            text-align: center;
+            margin: 2rem 0 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero-dark">
+    <div class="meta">📄 博客手记 · 十一月</div>
+    <h1>一处安静的入口</h1>
+    <div class="sub">关于 pg游戏 与浏览的节奏</div>
+</div>
+
+<main class="content">
+
+    <p class="lead">
+        每次打开一个页面，都像推开一扇门。门后是什么，有时比门本身更值得花时间打量。这篇笔记不是攻略，也不做推荐，只是把<a href="https://zhs-pggaming.com">pg游戏</a>这个站点放置在一个更清晰的轮廓里，方便你判断它是否适合自己。
+    </p>
+
+    <p>
+        互联网上有大量提供资讯或服务的游戏页面，但稳定与简洁并不总是同时出现。我最初注意到这个站点，是因为它在加载速度、布局一致性上的克制——没有刺眼的弹窗，没有频繁变动的导航结构。主页上方就是直接的功能分区，每一条信息的层级都足够清楚。对于只想快速浏览内容而不被干扰的人来说，这种设计本身就是一种友善。
+    </p>
+
+    <p>
+        后来陆陆续续用了几个月，逐渐把它当成一个固定的参考点。你不需要每次都重新适应界面，按钮位置不会无故跳动，文字大小和颜色也保持着统一的对比度。这种稳定感在信息过载的时代反而显得稀缺。当然，每个人对“好用”的定义不同，但如果你也在寻找一个能降低认知负担的去处，不妨先花三分钟看一看它的布局逻辑。
+    </p>
+
+    <!-- 引用提示块 -->
+    <div class="quote-block">
+        <p>
+            “页面本身也是一种语言。当它不喧哗时，内容才有机会被真正阅读。”
+        </p>
+        <span class="source">—— 来自一次关于界面极简的讨论</span>
+    </div>
+
+    <h2>页面说明 · 它不是什么</h2>
+    <p>
+        需要先说明的是，这个站点没有排行榜式的推荐，没有人工编辑的“必玩清单”，也没有社区热帖瀑布流。它更像一个结构化的索引：按照类型或主题把内容归类，你可以顺着分类自行探索。如果你习惯被算法推着走，可能一开始会觉得它“太安静”。但如果你希望自己做选择，这种安静反而是优势——每一个入口都是平等的，你点开哪个完全取决于当下的兴趣。
+    </p>
+
+    <p>
+        另外，页面的更新周期并不密集。有时候一周只变化两三次，但每次变动都伴随着分类或描述的调整，而不是单纯堆砌新条目。保持适度的更新节奏，让我觉得这个站点背后有人在思考，而不只是机械地填充内容。
+    </p>
+
+    <h2>稳定的入口意味着什么</h2>
+    <p>
+        稳定不等于一成不变。过去几个月里，我注意到它的配色微调过一次，导航栏的交互也变得更轻快。但这些变化都是在不打扰用户的前提下完成的——没有突然弹出“我们改版了”的横幅，没有强迫用户重新学习操作路径。好的迭代应该像树生长年轮，悄悄发生，等你回头才发现它已经更结实了。
+    </p>
+
+    <p>
+        如果你正在寻找一个可以长期停留、不消耗多余精力的游戏信息入口，<a href="https://zhs-pggaming.com">pg游戏</a>值得你把它加入书签。不需要注册，不需要关注社交账号，打开即用。当你想从信息洪流里暂时抽身，却仍然想保持一点浏览的乐趣时，这样的地方就显得格外珍贵。
+    </p>
+
+    <!-- 模拟FAQ摘要，不叫FAQ，但提供常见疑惑 -->
+    <div class="quote-block" style="margin-top: 2.2rem;">
+        <p><strong>一些可能你会想问的：</strong></p>
+        <p style="margin-bottom: 0.2rem;">· 内容分类是否清晰？—— 分栏明确，标题直观，几乎没有二级迷路。</p>
+        <p style="margin-bottom: 0.2rem;">· 移动端体验如何？—— 自适应做得不错，横竖屏切换无错位。</p>
+        <p style="margin-bottom: 0;">· 有没有广告或诱导？—— 目前没有发现贴片或误导性按钮。</p>
+        <span class="source">以上基于个人使用感受，仅供参考</span>
+    </div>
+
+    <div class="signoff">
+        <strong>写在后面</strong><br>
+        这篇介绍不是为了说服你使用某个服务，而是把真实的使用观察写下来。如果你恰好需要，那很好；如果不需要，也完全没关系。网络世界那么大，每个人都有自己的入口习惯。希望这篇笔记能帮你节省一点点筛选的时间。
+        <div style="margin-top: 0.8rem; color: #7d7368;">—— 2025 · 冬</div>
+    </div>
+
+    <div class="fine-print">
+        浏览即选择 · 保持温和
+    </div>
+
+</main>
+
+</body>
+</html>

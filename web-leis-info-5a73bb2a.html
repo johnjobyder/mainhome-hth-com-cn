@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷速 - 站点介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #2c3e50;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        /* Hero */
+        .hero {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
+            margin-bottom: 2.5rem;
+            border: 1px solid #e6eaef;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #1a2634;
+            margin-bottom: 0.75rem;
+        }
+        .hero .sub {
+            font-size: 1.15rem;
+            color: #5a6c7a;
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+        }
+        .hero .badge {
+            display: inline-block;
+            background: #eef2f7;
+            border-radius: 40px;
+            padding: 0.3rem 1rem;
+            font-size: 0.85rem;
+            color: #3d5368;
+            border: 1px solid #d9e0e8;
+        }
+        /* 卡片通用 */
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2rem 2rem 2.2rem;
+            margin-bottom: 1.8rem;
+            border: 1px solid #e6eaef;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+            transition: box-shadow 0.15s;
+        }
+        .card:hover {
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+        }
+        .card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1f2b38;
+            letter-spacing: -0.01em;
+        }
+        .card h2::before {
+            content: "▍";
+            color: #3b7cbf;
+            margin-right: 0.3rem;
+            font-weight: 400;
+        }
+        .card p {
+            margin-bottom: 0.9rem;
+            color: #3a4b5c;
+        }
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .card li {
+            padding: 0.4rem 0 0.4rem 1.6rem;
+            position: relative;
+            color: #34495e;
+        }
+        .card li::before {
+            content: "•";
+            color: #3b7cbf;
+            font-weight: bold;
+            position: absolute;
+            left: 0.2rem;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        .grid-2 .card {
+            margin-bottom: 0;
+        }
+        .faq-item {
+            border-bottom: 1px solid #ecf0f4;
+            padding: 1rem 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 600;
+            color: #1f2b38;
+            margin-bottom: 0.25rem;
+        }
+        .faq-a {
+            color: #4a5d6e;
+            font-size: 0.95rem;
+        }
+        .footer-links {
+            margin-top: 2.2rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #dce2e9;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5c6f80;
+        }
+        .footer-links a {
+            color: #2c5f8a;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer-links .sep {
+            margin: 0 0.8rem;
+            color: #bcc9d6;
+        }
+        @media (max-width: 680px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .hero {
+                padding: 2rem 1.2rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .card {
+                padding: 1.4rem 1.2rem;
+            }
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>雷速 · 信息聚合与工具服务</h1>
+        <p class="sub">一个面向效率与整合的轻量站点，提供精选内容索引、实用工具及资源导航。</p>
+        <span class="badge">持续维护 · 可信来源</span>
+    </div>
+
+    <!-- 介绍 + 可信说明 -->
+    <div class="card">
+        <h2>站点定位与可信基础</h2>
+        <p><a href="https://web-leis.com" style="color:#2c5f8a; font-weight:500; text-decoration:none;">雷速</a> 并非单一功能的工具页面，而是一个围绕信息整理与效率提升构建的微型平台。内容选取以实用性为前提，每个栏目都有明确来源或经过手动校验。站点不依赖自动采集，所有推荐与说明均基于人工筛选。</p>
+        <p>从工具链到阅读索引，从常用查询到学习素材，雷速尝试在繁杂的网络信息中划出一条简洁路径。页面结构清晰，无冗余跳转，适合需要快速定位资源的用户。</p>
+        <p>为了保持透明度，站点内涉及的第三方服务均标注出处，且不嵌入任何跟踪脚本或匿名统计模块。数据隐私与访问安全是基础考量。</p>
+    </div>
+
+    <!-- 优势区：网格卡片 -->
+    <div class="grid-2">
+        <div class="card">
+            <h2>内容优势</h2>
+            <ul>
+                <li>分类明确：工具、阅读、参考、生活等模块独立陈列</li>
+                <li>低噪设计：无广告植入，无信息流轰炸</li>
+                <li>定期更新：每两周对失效链接与内容进行复核</li>
+                <li>来源可溯：每项推荐均附带原始出处或说明</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>使用体验</h2>
+            <ul>
+                <li>响应式布局：桌面与移动端均保持可读性</li>
+                <li>快速加载：页面体积控制在 150KB 以内</li>
+                <li>无障碍支持：语义化标签与合理对比度</li>
+                <li>无强制注册：所有内容直接访问</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 说明区：场景与提示 -->
+    <div class="card">
+        <h2>适用场景与注意事项</h2>
+        <p>雷速适合以下使用情境：日常信息检索、工具查找、阅读素材收集、以及需要快速打开轻量页面而不想被复杂导航干扰的用户。站点本身不提供存储或账户系统，所有外部链接均指向第三方网站，使用前建议自行判断安全性与适用性。</p>
+        <p>如果你正在寻找一个结构稳定、更新有节奏且不掺杂商业推广的索引页面，<a href="https://web-leis.com" style="color:#2c5f8a; font-weight:500; text-decoration:none;">雷速</a> 值得加入书签。站点维护者会持续通过公告栏同步变动，确保信息一致。</p>
+        <p style="margin-top:0.8rem; font-size:0.9rem; color:#5d7388; background:#f0f3f8; padding:0.6rem 1rem; border-radius:12px;">提示：部分外部链接可能随时间变化而失效，若遇到死链欢迎通过站点内反馈渠道告知。</p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="card">
+        <h2>常见疑问摘要</h2>
+        <div class="faq-item">
+            <div class="faq-q">雷速是否收集用户数据？</div>
+            <div class="faq-a">不收集。站点没有注册表单、评论系统或分析脚本，仅提供静态内容。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">内容更新频率如何？</div>
+            <div class="faq-a">常规更新每两周一次，若发现链接或信息变动会即时调整。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">可以提交推荐资源吗？</div>
+            <div class="faq-a">目前暂不开放公开提交，但可通过站点内邮件地址联系维护者。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">雷速与其他导航站有何不同？</div>
+            <div class="faq-a">侧重人工筛选与低维护成本，不追求大而全，更关注长期可用性。</div>
+        </div>
+    </div>
+
+    <!-- 底部链接 -->
+    <div class="footer-links">
+        <span>雷速 · 信息简明</span>
+        <span class="sep">/</span>
+        <a href="https://web-leis.com">雷速</a>
+        <span class="sep">/</span>
+        <span>内容持续校准</span>
+        <span class="sep">/</span>
+        <span>非商业项目</span>
+    </div>
+
+</div>
+</body>
+</html>

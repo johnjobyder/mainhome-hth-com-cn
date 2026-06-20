@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>炸金花游戏 · 刊首专题</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f1f3f5;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #2b2e33;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* 杂志横幅 */
+    .hero {
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.02);
+      padding: 3rem 2rem 2.5rem;
+      margin-bottom: 3rem;
+      border: 1px solid #e4e7ea;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: #eaeef2;
+      color: #3b4b5a;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #1b1f24;
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #4d5763;
+      max-width: 620px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-meta {
+      border-top: 1px solid #e8ebee;
+      padding-top: 1.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      font-size: 0.9rem;
+      color: #5d6774;
+    }
+
+    .hero-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    /* 卡片网格 */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+      margin-bottom: 2.8rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1.8rem 1.6rem 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03), 0 1px 3px rgba(0,0,0,0.02);
+      border: 1px solid #e8ebee;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.03);
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      font-weight: 550;
+      color: #1f252c;
+      margin-bottom: 0.9rem;
+      letter-spacing: -0.01em;
+      border-left: 4px solid #c8d0d9;
+      padding-left: 0.8rem;
+    }
+
+    .card p {
+      color: #3d4651;
+      font-size: 0.96rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .card .sub {
+      color: #6b7785;
+      font-size: 0.88rem;
+    }
+
+    /* 深度段落区 */
+    .essay-block {
+      background: #ffffff;
+      border-radius: 24px;
+      border: 1px solid #e8ebee;
+      padding: 2.2rem 2rem;
+      margin-top: 2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .essay-block h3 {
+      font-size: 1.35rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: #1f252c;
+      letter-spacing: -0.01em;
+    }
+
+    .essay-block p {
+      margin-bottom: 1.2rem;
+      color: #37404b;
+    }
+
+    .essay-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .essay-block a {
+      color: #1e3349;
+      text-decoration: none;
+      border-bottom: 1.5px solid #b7c2ce;
+      transition: border-color 0.15s;
+      font-weight: 480;
+    }
+
+    .essay-block a:hover {
+      border-bottom-color: #1f2b36;
+    }
+
+    /* FAQ 摘要 */
+    .faq-mini {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2.5rem;
+      background: #ffffff;
+      border-radius: 24px;
+      border: 1px solid #e8ebee;
+      padding: 1.8rem 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .faq-item {
+      flex: 1 1 200px;
+    }
+
+    .faq-item .q {
+      font-weight: 530;
+      color: #1f252c;
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+    }
+
+    .faq-item .a {
+      color: #53606d;
+      font-size: 0.9rem;
+    }
+
+    /* 页尾 */
+    .footer-note {
+      text-align: left;
+      border-top: 1px solid #dce1e6;
+      padding-top: 1.8rem;
+      margin-top: 1.5rem;
+      font-size: 0.92rem;
+      color: #53606d;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.8rem;
+    }
+
+    .footer-note a {
+      color: #1e3349;
+      text-decoration: none;
+      border-bottom: 1.5px solid #c4ced9;
+    }
+
+    .footer-note a:hover {
+      border-bottom-color: #1f2b36;
+    }
+
+    .footer-right {
+      font-size: 0.85rem;
+      color: #758292;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      body { padding: 1.2rem 0.8rem; }
+      .hero { padding: 2rem 1.2rem; }
+      .hero h1 { font-size: 2rem; }
+      .essay-block { padding: 1.6rem 1.2rem; }
+      .faq-mini { padding: 1.4rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 首页横幅 hero -->
+  <header class="hero">
+    <div class="hero-tag">· 特辑 · 稳定入口</div>
+    <h1>炸金花 · 熟悉与从容</h1>
+    <p>一张牌桌，三张手牌，比的是胆识与判断。我们更在意你每次打开时那份稳定的体验。</p>
+    <div class="hero-meta">
+      <span>📌 场景 · 日常休闲</span>
+      <span>🔹 风格 · 经典规则</span>
+      <span>📍 指引 · 直接抵达</span>
+    </div>
+  </header>
+
+  <!-- 三段自然介绍（卡片网格） -->
+  <div class="features-grid">
+    <div class="card">
+      <h2>背景 · 牌局小记</h2>
+      <p>炸金花流传于街头巷尾、老友聚会，讲究的是瞬间读牌与心理博弈。没有冗长的铺垫，三张牌定胜负，节奏明快又带着悬念。</p>
+      <p class="sub">比牌、闷牌、加注，每局都是一次微型叙事。</p>
+    </div>
+    <div class="card">
+      <h2>体验 · 专注牌面</h2>
+      <p>页面保持清爽直观，没有杂乱的弹窗与浮夸特效。牌型对比、大小判断一目了然，让你把所有注意力放回牌局本身。</p>
+      <p class="sub">每一次发牌都忠实于经典规则。</p>
+    </div>
+    <div class="card">
+      <h2>场景 · 随时一局</h2>
+      <p>等人、通勤、晚间放空时最适合打开。不必登录繁琐流程，打开即玩，关掉即走。它像一本短篇集，每局都简短而完整。</p>
+      <p class="sub">不占内存，不粘人，但足够尽兴。</p>
+    </div>
+  </div>
+
+  <!-- 深度段落：稳定入口与页面说明 -->
+  <div class="essay-block">
+    <h3>稳定的入口，熟悉的位置</h3>
+    <p>
+      很多人习惯把常用的网站存在书签栏，或者直接记在脑子里。而 <a href="https://zh-cn-goldenflower.com">炸金花游戏</a> 
+      最让我舒服的一点就是：它的入口始终在那里，不会突然改域名，不会莫名其妙跳转到别的页面。打开之后就是牌桌，连加载都利落。
+    </p>
+    <p>
+      我回想自己第一次玩的时候，其实没抱什么期待。但连续几次之后发现，它每次打开的界面、按钮的位置、发牌的速度都差不多，这种一致性反而让人安心。炸金花本来就是个需要放松心情的游戏，如果连入口都在变来变去，那就没意思了。
+    </p>
+    <p>
+      所以如果你只是想找个地方，偶尔玩几把炸金花，不想要花里胡哨的推广或弹窗，不妨把 <a href="https://zh-cn-goldenflower.com">炸金花游戏</a> 
+      放进收藏夹。它就是一个安静的牌桌，你来了就发牌，你走了它也不闹。有时候稳定本身就是一种质感。
+    </p>
+  </div>
+
+  <!-- FAQ 摘要（轻量） -->
+  <div class="faq-mini">
+    <div class="faq-item">
+      <div class="q">⚡ 需要注册吗？</div>
+      <div class="a">不用。打开即玩，无强制注册或手机绑定。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">🎲 牌型规则标准吗？</div>
+      <div class="a">完全沿用常见炸金花规则：豹子＞同花顺＞同花＞顺子＞对子＞散牌。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">📱 手机打开正常吗？</div>
+      <div class="a">自适应布局，手机、平板、电脑都能顺畅操作。</div>
+    </div>
+  </div>
+
+  <!-- 页尾访问提示 -->
+  <footer class="footer-note">
+    <div>
+      <span>喜欢的话就存下这个地址：</span>
+      <a href="https://zh-cn-goldenflower.com">炸金花游戏</a>
+      <span style="margin-left: 0.6rem;">—— 简单，直接，不绕路</span>
+    </div>
+    <div class="footer-right">
+      杂志专题 · 2025
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
